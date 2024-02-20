@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div {
+                display:flex;
+                align-items: center;
+            }
+            .v {
+                display: flex;
+                flex-direction: column; /* 세로로 요소를 쌓도록 설정 */
+            }
+            .h {
+                display: flex;
+                flex-direction: row; /* 가로로 요소를 쌓도록 설정 */
+            }
+        </style>
+        <script src="./parsor.js"></script>
+    </head>
+    <body>
+        <div class="v">
+            <div class="h" style="margin-bottom:20px;">
+                <input type="file" id="file_input">
+                <button id="upload_button">Upload SMI File</button>
+            </div>
+            <div class="v" style="width:100%">
+                <div class="h">
+                    <button id="play">Play</button>
+                    <button id="pause">Pause</button>
+                    <button id="stop">Stop</button>
+                </div>
+                <div class="h" style="width:100%">
+                    <span id="time_current" ></span>
+                    <input type="range" id="slider_play" min="0" max="100" value="0" style="width:100%">
+                </div>
+                <div class="v">
+                    <div>Subtitle</div>
+                    <div id="subtitle_content"></div>
+                </div>
+            </div>
+        </div>
+        <script src="./upload.js"></script>
+    </body>
+</html>
